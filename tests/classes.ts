@@ -28,7 +28,7 @@ export class InventoryPage {
   private itemByTitle(title: string) {
     return this.page
       .getByTestId('inventory-item')
-      .filter({ has: this.page.getByTestId('inventory-item-name').getByText(title, { exact: true }) });
+      .filter({ has: this.page.getByTestId('inventory-item-name').getByText(title)});
   }
 
   async goToCart() {
